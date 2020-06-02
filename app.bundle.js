@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/main.scss */ \"./src/sass/main.scss\");\n/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log(\"JHeljkhjoo\");\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/main.scss */ \"./src/sass/main.scss\");\n/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n  var lazyImages = [].slice.call(document.querySelectorAll(\"img.lazy\"));\n\n  if (\"IntersectionObserver\" in window) {\n    var lazyImageObserver = new IntersectionObserver(function (entries, observer) {\n      entries.forEach(function (entry) {\n        if (entry.isIntersecting) {\n          var lazyImage = entry.target;\n          lazyImage.src = lazyImage.dataset.src;\n          lazyImage.classList.remove(\"lazy\");\n          lazyImageObserver.unobserve(lazyImage);\n        }\n      });\n    });\n    lazyImages.forEach(function (element) {\n      lazyImageObserver.observe(element);\n    });\n  }\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
