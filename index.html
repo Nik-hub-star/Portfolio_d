@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <meta name="viewport" content="width=device-width,initial- scale=1" />
-  </head>
-  <body>
-    <h3>My Portfolio</h3>
-    <img
-      src="assets/images/sample.jpg"
-      alt="image"
-      height="400px"
-      width="200px"
-    />
-    <svg class="feature__icon">
-      <use xlink:href="assets/icons/arrow-redo-circle-outline.svg"></use>
-    </svg>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta name="viewport" content="width=device-width,initial- scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class='header'>
+    <div class="header__container">
+      <div class="header__image">
+        <img src='/assets/images/sample.jpg' class='profileImage'>
+      </div>
+      <div class="header__about">
+        <p class='about__text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+          has
+          been the industry's standard
+          dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+          specimen
+          book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+          essentially
+          unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+          passages,
+          and more
+          recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+    </div>
+  </header>
+  <nav class='nav'>
+    <ul class="nav__list">
+
+      <li class="nav__item"><a href="" class="nav__link">Lakshyadeep</a></li>
+      <li class="nav__item"><a href="" class="nav__link">Manali</a></li>
+      <li class="nav__item"><a href="" class="nav__link">Gangtok</a></li>
+      <li class="nav__item"><a href="" class="nav__link">Nepal</a></li>
+      <li class="nav__item"><a href="" class="nav__link">Andaman&Nikobar</a></li>
+
+    </ul>
+  </nav>
+  <svg class="feature__icon">
+    <use xlink:href="assets/icons/arrow-redo-circle-outline.svg"></use>
+  </svg>
+</body>
+
 </html>
