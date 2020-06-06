@@ -1,33 +1,98 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
-
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
-
-@import "components/bg-video";
-@import "components/button";
-@import "components/card";
-@import "components/composition";
-@import "components/feature-box";
-@import "components/form";
-@import "components/popup";
-@import "components/story";
-
-@import "layout/footer";
-@import "layout/grid";
-@import "layout/header";
-@import "layout/navigation";
-
-@import "pages/home";
-
-h3 {
-  color: blue;
-  font-size: 2rem;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
-img {
-  margin: 500px auto 500px;
-  display: block;
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  // @include respond(tab-land) {
+  //   // width < 1200?
+  //   font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  // }
+
+  // @include respond(tab-port) {
+  //   // width < 900?
+  //   font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  // }
+
+  // @include respond(big-desktop) {
+  //   font-size: 75%; //1rem = 12, 12/16
+  // }
+}
+
+body {
+  box-sizing: border-box;
+  // padding: 3rem;
+
+  // @include respond(tab-port) {
+  //   padding: 0;
+  // }
+}
+
+::selection {
+  // background-color: $color-primary;
+  // color: $color-white;
+}
+.header {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  height: 90vh;
+  background: linear-gradient(to right, #000428, #004e92);
+  position: relative;
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__image {
+    flex-basis: 45%;
+  }
+
+  &__about {
+    flex-basis: 45%;
+    font-size: 20px;
+  }
+}
+
+.profileImage {
+  border-radius: 50%;
+  width: 500px;
+}
+
+.nav {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  border: 1px solid #ccc;
+
+  &__list {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    line-height: 1.4;
+    color: #000428;
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #000428;
+  }
 }
